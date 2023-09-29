@@ -1,0 +1,35 @@
+GET http://localhost:8080/
+
+### Get all personnel
+GET http://localhost:8080/personnel
+
+### Create personnel
+POST http://localhost:8080/personnel HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Doe",
+    "email":"firstname.lastname@us.army.mil",
+    "birthday":"01/01/2001",
+    "rank":"non-commisioned officer",
+    "company":"1st infantry division",
+    "dateOfDeployment":"01/01/2023"
+}
+
+### Update personnel
+PUT http://localhost:8080/personnel/651690672322f159a804c437
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Doe",
+    "email":"firstname.lastname@us.army.mil",
+    "birthday":"01/01/2001",
+    "rank":"commisioned officer",
+    "company":"1st infantry division",
+    "dateOfDeployment":"01/01/2023"
+}
+
+### Delete personnel
+DELETE http://localhost:8080/personnel/651690672322f159a804c437
