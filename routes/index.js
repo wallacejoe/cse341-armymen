@@ -8,5 +8,6 @@ router.get('/', (req, res) => {
 })
 
 router.use('/personnel', require('./personnel'))
+router.use("/company", require("./company"))
 
 module.exports = router

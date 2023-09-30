@@ -12,13 +12,13 @@ content-type: application/json
     "lastName":"Doe",
     "email":"firstname.lastname@us.army.mil",
     "birthday":"01/01/2001",
-    "rank":"non-commisioned officer",
+    "rank":"commisioned officer",
     "company":"1st infantry division",
     "dateOfDeployment":"01/01/2023"
 }
 
 ### Update personnel
-PUT http://localhost:8080/personnel/651690672322f159a804c437
+PUT http://localhost:8080/personnel/651694c0761e07099b13de79
 content-type: application/json
 
 {
@@ -26,10 +26,34 @@ content-type: application/json
     "lastName":"Doe",
     "email":"firstname.lastname@us.army.mil",
     "birthday":"01/01/2001",
-    "rank":"commisioned officer",
+    "rank":"non-commisioned officer",
     "company":"1st infantry division",
     "dateOfDeployment":"01/01/2023"
 }
 
 ### Delete personnel
-DELETE http://localhost:8080/personnel/651690672322f159a804c437
+DELETE http://localhost:8080/personnel/651694c0761e07099b13de79
+
+### Get all company
+GET http://localhost:8080/company
+
+### Create company
+POST http://localhost:8080/company HTTP/1.1
+content-type: application/json
+
+{
+    "companyName":"1st Cavalry Division",
+}
+
+### Update company
+PUT http://localhost:8080/company/id
+content-type: application/json
+
+{
+    "companyName":"1st Cavalry Division",
+    "deployment":"Fort Cavazos",
+    "location":"Texas"
+}
+
+### Delete company
+DELETE http://localhost:8080/company/id
