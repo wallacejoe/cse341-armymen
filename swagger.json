@@ -8,7 +8,6 @@
   "host": "cse341-armymen.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
